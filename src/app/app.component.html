@@ -1,0 +1,47 @@
+
+    <div class="container">
+        <h1> Music Library</h1>
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-light bg-white " style="margin: 0px;padding:0px;">
+                    <div class="container-fluid  d-flex flex-row justify-content-start" style="margin: 0px;padding:0px;">                        
+                        <i class="fa fa-search searchbar" style="margin-right: 20px;"></i>
+                        <input type="text" placeholder="Search" style="text-indent:4px" (keyup)="searchSong($event)" />
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+              <hr style="border:2px solid lightgrey">
+              <table style="width:-webkit-fill-available">
+                <thead>
+                  <th style="padding: 4px;margin: 4px;border:2px solid lightgrey;">Title</th>
+                  <th style="padding: 4px;margin: 4px;border:2px solid lightgrey;column-span: 2;">Song List</th>
+                  <th style="padding: 4px;border:2px solid lightgrey;">Lyricists</th>
+                  <th style="padding: 4px;border:2px solid lightgrey;">Composers</th>
+                </thead>
+                <tbody *ngFor="let songs of allSongs">
+                  <td style="padding: 4px;border:2px solid lightgrey;text-transform: capitalize;">{{songs}}</td>
+                  <td style="padding: 4px;border:2px solid lightgrey;text-transform: capitalize;column-span: 2;">
+                      <div *ngFor="let songList of getSongsList(songs)">
+                        {{songList}}
+                        <span *ngIf="getSongsList(songs)[getSongsList(songs).length-1] !== songList">,</span>
+                      </div>
+                  </td>                  
+                  <td style="padding: 4px;border:2px solid lightgrey;text-transform: capitalize;">{{getLyricist(songs)}}</td>
+                  <td style="padding: 4px;border:2px solid lightgrey;text-transform: capitalize;">{{getComposers(songs)}}</td>
+                </tbody>
+              </table>              
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-end">
+            <i class="fa fa-plus" style="font-size:33px;cursor:pointer;margin-top:44px" (click)="openDialog()"></i>
+        </div>
+    </div>
+
+
+
+
+<router-outlet></router-outlet>

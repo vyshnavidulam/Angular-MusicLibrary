@@ -1,0 +1,47 @@
+<div style='transform: none;position: absolute;top: 158px;left: 20%;border: 2px solid lightblue;height: 50%;background: #fff;width: 54%;box-shadow:0px 6px 81px lightgrey;border-radius:10px'>
+    <div style='display:flex;flex:100%;margin:10px'>
+        <h1 style="font-size:24px;margin-top: 10px;">Insert Song</h1>  
+        <i class='fa fa-times' style='cursor:pointer;margin: 10px 10px 0px auto;font-size: 24px;' (click)="closeDialog()"></i>
+    </div>
+    <div style="display:flex;justify-content: center;margin: auto;flex-direction: column;align-items: center;">
+        <div>            
+        <table>
+            <tr>
+                <td>
+                    Movie Name
+                </td>
+                <td>
+                    <input type="text" (keyup)="storeMovieName($event)" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Songs (*Seperate with ,)
+                </td>
+                <td>
+                    <input type="text" (keyup)="storeSongs($event)"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Lyricist
+                </td>
+                <td>
+                    <input type="text" (keyup)="storeLyricist($event)" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Composer
+                </td>
+                <td>
+                    <input type="text" (keyup)="storeComposer($event)"/>
+                </td>
+            </tr>
+        </table>              
+        </div>
+        <div style="margin: 10px;">
+            <button style="border-radius: 10px;background: gray;color: white;font-size: larger;font-weight: bold;" (click)="insertData()">Submit</button>
+        </div>
+    </div>    
+</div>

@@ -1,0 +1,12 @@
+.searchbar {
+    color:grey;
+}
+
+
+.btn {
+    color:black;
+
+    padding: 12px 16px;
+    font-size: 60px;
+    cursor:pointer;
+}

@@ -1,0 +1,46 @@
+[
+  {
+      "id":"1",
+      "title":"Bheemla nayak",
+      "year":2022,
+      "songs":[
+          {
+              "title":"La La Bheemla",
+              "length":6000,
+              "composers":[
+                  "Arun",
+                  "Thaman"
+              ],
+              "singers":[
+                  "Arun"
+              ],
+              "Lyricist":[
+                  "Ramajoigaiah sastry",
+                  "Arun"
+              ]
+            }
+        ]
+    },
+    {
+        "id":"2",
+        "title":"Bheemla nayak",
+        "year":2022,
+        "songs":[
+            {
+                "title":"antha istam",
+                "length":6000,
+                "composers":[
+                    "Arun",
+                    "Thaman"
+                ],
+                "singers":[
+                    "Arun"
+                ],
+                "Lyricist":[
+                    "Ramajoigaiah sastry",
+                    "Arun"
+                ]
+              }
+          ]
+      }
+]
